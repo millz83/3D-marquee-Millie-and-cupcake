@@ -1,0 +1,82 @@
+body {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    background:rgb(214, 156, 166);
+}
+
+
+.wrapper {
+    position: absolute;
+    top:50%;
+    left:50%;
+    transform:translate(-50%, -50%);
+    width:1000px;
+    height:150px;
+}
+
+.text {
+    text-align: center;
+    line-height: 150px;
+    overflow: hidden;
+    position: absolute;
+    width:500px;
+    height:150px;
+
+}
+
+.text span {
+    display: block;
+    transition:.5s;
+    width:100%;
+    height:100%;
+
+}
+
+.text1 {
+    background:purple;
+    color:rgba(255,255,255,1);
+    transform-origin:left;
+    left:0;
+    transform:perspective(900px) rotateY(-58deg);
+
+}
+
+.text2 {
+    background:rgba(104, 13, 104);
+    color:rgba(255,255,255,0.8);
+    transform-origin:right;
+    right:0;
+    transform:perspective(900px) rotateY(58deg);
+
+}
+
+.text1 span{
+    position: absolute;
+    animation: effect1 15s linear infinite;
+    font-size:45px;
+}
+
+
+.text2 span{
+    position: absolute;
+    animation: effect2 15s linear infinite;
+    font-size:45px;
+}
+
+@keyframes effect1 {
+    0%{
+        left:200%;
+    }
+    100%{
+        left:-100%;
+    }
+}
+
+@keyframes effect2 {
+
+    0% {
+        left:100%;
+    }
+    100%{
+        left:-200%;
+    }
+}
